@@ -17,29 +17,47 @@ btn.addEventListener('click', () => {
 let availableCoin = 100;
 const availableCoins = document.getElementById('available-coin');
 const callBtns = document.querySelectorAll('.call-btn');
+const historyList = document.getElementById('history-list');
+const historyTemplate = document.getElementById('history-template');
+const clearBtn = document.getElementById('clear-history');
 
-for(const btn of callBtns){
+for (const btn of callBtns) {
     btn.addEventListener('click', () => {
-        if(availableCoin >= 20){
+        if (availableCoin >= 20) {
+            // Coin কমানো
             availableCoin -= 20;
-        } else{
-            alert('❌Not enough Coins! you need minimum 20 coins for calling')
-        }
-        availableCoins.textContent = availableCoin;
-        const service = btn.dataset.service;
-        const number = btn.dataset.number;
+            availableCoins.textContent = availableCoin;
 
-        const data = {
-            name: 'National Emergency',
-            number
-        }
-        
+            // Service info নেওয়া
+            const service = btn.dataset.service;
+            const number = btn.dataset.number;
 
-        alert(`📞 Calling...\n${service} ${number}`);
-    })
+            // Alert দেখানো
+            alert(`📞 Calling...\n${service} ${number}`);
+
+            // সময়
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+
+            // Template clone করে history বানানো
+            const historyItem = historyTemplate.cloneNode(true);
+            historyItem.classList.remove('hidden');
+            historyItem.querySelector('.history-service').textContent = service;
+            historyItem.querySelector('.history-number').textContent = number;
+            historyItem.querySelector('.history-time').textContent = timeString;
+
+            // History এ যোগ করা
+            historyList.prepend(historyItem);
+
+        } else {
+            alert('❌ Not enough Coins! You need minimum 20 coins for calling');
+        }
+    });
 }
 
-// history feature
+// Clear history button
+clearBtn.addEventListener('click', () => {
+    historyList.innerHTML = '';
+});
 
-const historyData = []
 
