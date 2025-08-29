@@ -25,7 +25,10 @@ for( const btn of copyBtns){
 }
 
 function copyNumber(elementId){
-    var number = document.getElementById
+    var number = document.querySelectorAll(elementId).innerText;
+    navigator.clipboard.writeText(number).then(function (){
+        alert('Number copied:' + number)
+    })
 }
 
 
