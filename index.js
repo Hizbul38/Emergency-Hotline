@@ -11,6 +11,24 @@ btn.addEventListener('click', () => {
 })
 }
 
+// copy feature
+
+let totalCopyNumber = 0;
+const totalCopyNumbers = document.getElementById('copy-number');
+const copyBtns =document.querySelectorAll('.copy-btn')
+
+for( const btn of copyBtns){
+    btn.addEventListener('click', () =>{
+        totalCopyNumber++;
+        totalCopyNumbers.textContent = totalCopyNumber;
+    })
+}
+
+function copyNumber(elementId){
+    var number = document.getElementById
+}
+
+
 // call feature
 
 

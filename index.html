@@ -31,9 +31,10 @@
       <img class="h-7 w-7" src="assets/coin.png" alt="">
     </div>
 
-    <button class="bg-green-600 hover:bg-green-700 text-white  rounded-full font-medium px-3 md:px-3 py-1">
-      2 Copy
-    </button>
+    <div class="bg-green-600 hover:bg-green-700 text-white  rounded-full font-medium px-3 md:px-3 py-1 flex gap-2">
+      <p id="copy-number">0</p>
+      <p>Copy</p>
+    </div>
   </div>
 </nav>
 </header>
@@ -52,10 +53,10 @@
                     <button class=" love-btn absolute top-7 right-5 text-gray-400 hover:text-red-500"><i class="fa-regular fa-heart"></i></button>
                     <h2 class="text-[20px] font-bold" >National Emergency Number</h2>
                     <p class="service-name font-[500] text-[#5c5c5c]">National Emergency</p>
-                    <h1 class="service-number text-3xl font-bold mt-5" >999</h1>
+                    <h1 class="service-number text-3xl font-bold mt-5" id="emergency-number" >999</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[45px] h-[30px] rounded-full">All</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class=" border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button onclick="copyNumber('emergency-number')" class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class=" call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="National Emergency" data-number="999"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
 
@@ -68,7 +69,7 @@
                     <h1 class="service-number text-3xl font-bold mt-5">999</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[60px] h-[30px] rounded-full">Police</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class="border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class=" call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="Police Helpline" data-number="999"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
 
@@ -81,7 +82,7 @@
                     <h1 class="service-number text-3xl font-bold mt-5">999</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[50px] h-[30px] rounded-full">Fire</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class="border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class="call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="Fire Service" data-number="999"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
 
@@ -96,7 +97,7 @@
                     <h1 class="service-number text-3xl font-bold mt-5">1994-999999</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[55px] h-[30px] rounded-full">Helth</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class="border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class="call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="Ambulance Service" data-number="1994-999999"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
 
@@ -109,7 +110,7 @@
                     <h1 class="service-number text-3xl font-bold mt-5">109</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[55px] h-[30px] rounded-full">Help</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class="border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class="call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="Women & Child" data-number="109"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
 
@@ -122,7 +123,7 @@
                     <h1 class="service-number text-3xl font-bold mt-5">106</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[55px] h-[30px] rounded-full">Govt</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class="border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class="call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="Anti-Corruption" data-number="106"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
 
@@ -137,7 +138,7 @@
                     <h1 class="service-number text-3xl font-bold mt-5">16216</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[90px] h-[35px]  rounded-full">Electricity</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class="border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class=" call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="Electricity Outage" data-number="16216"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
 
@@ -150,7 +151,7 @@
                     <h1 class="service-number text-3xl font-bold mt-5">16445</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[50px] h-[30px] rounded-full">NGO</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class="border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class="call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="Brac Helpline" data-number="16445"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
 
@@ -163,7 +164,7 @@
                     <h1 class="service-number text-3xl font-bold mt-5">163</h1>
                     <button class="text-[#5c5c5c] bg-[#f2f2f2] w-[60px] h-[30px] rounded-full">Travel</button>
                     <div class="buttons flex justify-between mt-5">
-                        <button class="border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button class="copy-btn border-1 border-[#d4d6d5] w-35 h-8 rounded-[10px]"><i class="fa-regular fa-copy"></i> Copy</button>
                         <button class="call-btn w-35 h-8 bg-[#00a63e] rounded-[10px] text-white" data-service="Bangladesh Railway" data-number="163"><i class="fa-solid fa-phone"></i> Call</button>
                     </div>
                 </div>
